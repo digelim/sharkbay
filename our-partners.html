@@ -1,0 +1,695 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="./logo.png" type="image/x-icon">
+    <title>Shark Bay Wind & Water</title>
+    <link rel="stylesheet" href="./style.css">
+    <style>
+        html {
+            font-size: 1px;
+        }
+
+        body::-webkit-scrollbar {
+            width: 14px;
+        }
+        
+        body::-webkit-scrollbar-track {
+            border-radius: 8px;
+            background-color: transparent;
+            border: 1px solid #cacaca;
+            box-shadow: inset 0 0 6px rgba(0, 0, 0, .3);
+        }
+
+        body::-webkit-scrollbar-thumb {
+            border-radius: 8px;
+            background-color: rgba(255,255,255,.2)
+        }
+    </style>
+</head>
+<body class="bg-custom-gray">
+    <nav class="text-white py-4 fixed top-0 left-0 right-0 text-center">
+        <div class="max-md:justify-between max-md:px-[30rem] container mx-auto max-w-[1383rem] flex gap-x-[40rem] items-center justify-center">
+            <div class="hidden max-md:inline-flex">
+                <a href="#" class="mobile-menu">
+                    <div class="front">
+                        <img src="mobile-menu.svg" alt="">
+                    </div>
+                   
+                    <div class="top">
+                        <img src="mobile-menu.svg" alt="">
+                    </div>
+                    <div class="bottom">
+                        <img src="mobile-menu.svg" alt="">
+                    </div>
+                    <div class="left">
+                        <img src="mobile-menu.svg" alt="">
+                    </div>
+                    <div class="right">
+                        <img src="mobile-menu.svg" alt="">
+                    </div>
+                </a>
+            </div>
+            <ul class="max-md:hidden flex space-x-2">
+                <li>
+                    <a href="home.html" class="nav-link text-[17rem] text-[13rem] max-xl:text-[11rem] text-cyan-400">Home
+                        <div class="w-[50.59rem] h-0.5 bg-gradient-to-r from-cyan-400 to-transparent"></div>
+                    </a>
+                </li>
+                <li>
+                    <a href="about.html" class="nav-link text-[17rem]">Meet The Crew
+                        <div class="w-[50.59rem] h-0.5 bg-gradient-to-r from-cyan-400 to-transparent"></div>
+                    </a>
+                </li>
+                <li>
+                    <a href="events.html" class="nav-link text-[17rem]">Events
+                        <div class="w-[50.59rem] h-0.5 bg-gradient-to-r from-cyan-400 to-transparent"></div>
+                    </a>
+                </li>
+                <li>
+                    <a href="how-to-find-us.html" class="nav-link text-[17rem]">How to Find Us
+                        <div class="w-[50.59rem] h-0.5 bg-gradient-to-r from-cyan-400 to-transparent"></div>
+                    </a>
+                </li>
+            </ul>
+            
+            <a href="home.html" class="text-white text-2xl font-medium">
+                <img src="./logo.png" alt="">
+            </a>
+
+            <svg class="hidden max-md:block" width="21" height="27" viewBox="0 0 21 27" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M14.1862 14.1942C12.9939 14.1017 8.19549 14.0901 7.01471 14.1942C5.11146 14.3713 3.34696 15.2655 2.07951 16.6954C0.812063 18.1253 0.136676 19.9837 0.190485 21.8931C0.224139 23.0315 0.686258 24.1153 1.48455 24.928C2.28285 25.7408 3.35856 26.2227 4.49687 26.2776C5.80499 26.3181 15.2744 26.3181 16.4899 26.2776C17.3551 26.2847 18.2033 26.0373 18.9289 25.5663C19.6545 25.0952 20.2254 24.4213 20.5706 23.6284C21.003 22.6465 21.1124 21.5529 20.8831 20.5049C20.6233 18.8606 19.8248 17.3489 18.6129 16.2069C17.4009 15.0648 15.844 14.357 14.1862 14.1942ZM16.2758 24.5307C15.1181 24.5307 5.91496 24.5307 4.69945 24.5307C4.11304 24.5255 3.54326 24.3353 3.07137 23.9874C2.59949 23.6394 2.24962 23.1514 2.07163 22.593C1.90021 22.0101 1.87832 21.3935 2.00796 20.7999C2.22925 19.4102 2.94454 18.1469 4.02261 17.2416C5.10068 16.3364 6.46921 15.85 7.87715 15.8717C9.69463 15.8717 11.5063 15.8717 13.3238 15.8717C13.6748 15.8669 14.0254 15.894 14.3715 15.9526C15.661 16.1645 16.8423 16.8021 17.7268 17.7635C18.6113 18.725 19.1478 19.9549 19.2509 21.2568C19.3176 21.6761 19.2891 22.105 19.1677 22.5118C19.0463 22.9186 18.835 23.293 18.5495 23.6072C18.2639 23.9215 17.9113 24.1677 17.5177 24.3275C17.1242 24.4873 16.6998 24.5568 16.2758 24.5307Z" fill="url(#paint0_linear_280_1227)"/>
+                <path d="M10.5688 12.4011C12.1761 12.4011 13.7179 11.7642 14.8561 10.63C15.9943 9.49587 16.636 7.95698 16.6406 6.35073C16.6437 4.74646 16.0109 3.20625 14.8806 2.06699C13.7504 0.927725 12.2146 0.282137 10.6093 0.271434C9.811 0.269913 9.0202 0.425737 8.2822 0.729987C7.54421 1.03424 6.87349 1.48094 6.30845 2.04453C5.74341 2.60812 5.29512 3.27754 4.98927 4.01446C4.68341 4.75139 4.52598 5.54136 4.52598 6.33916C4.52749 7.94242 5.1639 9.47992 6.29616 10.6158C7.42842 11.7516 8.96449 12.3934 10.5688 12.4011ZM10.5688 1.98937C11.1386 1.98709 11.7033 2.09708 12.2305 2.31306C12.7578 2.52904 13.2372 2.84677 13.6415 3.24807C14.0457 3.64938 14.3669 4.12639 14.5865 4.65182C14.8062 5.17726 14.92 5.7408 14.9215 6.31023C14.9277 7.45981 14.477 8.56483 13.6685 9.38258C12.8599 10.2003 11.7597 10.6639 10.6093 10.6716C10.0395 10.6716 9.4753 10.5593 8.94893 10.3412C8.42257 10.1232 7.94438 9.80352 7.54174 9.40061C7.13909 8.99769 6.81988 8.51941 6.60235 7.9931C6.38482 7.4668 6.27324 6.90281 6.274 6.33338C6.27393 5.19385 6.72372 4.1003 7.52568 3.29022C8.32764 2.48013 9.41701 2.01891 10.5572 2.00672L10.5688 1.98937Z" fill="url(#paint1_linear_280_1227)"/>
+                <defs>
+                    <linearGradient id="paint0_linear_280_1227" x1="0.1875" y1="9.17866" x2="21.4667" y2="9.62539" gradientUnits="userSpaceOnUse">
+                        <stop stop-color="#04FEE5"/>
+                        <stop offset="1" stop-color="#0088FE"/>
+                    </linearGradient>
+                    <linearGradient id="paint1_linear_280_1227" x1="0.1875" y1="9.17866" x2="21.4667" y2="9.62539" gradientUnits="userSpaceOnUse">
+                        <stop stop-color="#04FEE5"/>
+                        <stop offset="1" stop-color="#0088FE"/>
+                    </linearGradient>
+                </defs>
+            </svg>
+                
+        
+            <ul class="max-md:hidden flex space-x-2">
+                <li><a href="gallery.html" class="nav-link text-[17rem]">Gallery
+                    <div class="w-[50.59rem] h-0.5 bg-gradient-to-r from-cyan-400 to-transparent"></div>
+                </a></li>
+                <li><a href="our-partners.html" class="nav-link active text-cyan-400 text-[17rem]">Our Partners
+                    <div class="w-[50.59rem] h-0.5 bg-gradient-to-r from-cyan-400 to-transparent"></div>
+                </a></li>
+                <li><a href="get-in-touch.html" class="nav-link text-[17rem]">Get In Touch
+                    <div class="w-[50.59rem] h-0.5 bg-gradient-to-r from-cyan-400 to-transparent"></div>
+                </a></li>
+            </ul>
+
+            <a href="https://sb-wwa.com/wordpress/wp-admin/" class="login max-md:hidden text-white text-[13rem] max-xl:text-[11rem] font-medium p-[2rem]">
+                <span class="flex w-full px-[32rem] py-[9rem]">Login</span>
+            </a>
+        </div>
+    </nav>
+    <section class="bg-fixed h-screen bg-cover bg-center bg-no-repeat bg-[url(./partners.png)]">
+        <div class="w-full h-[24vh] custom-gradient-reverse"></div>
+        <div class="text-white flex h-screen absolute items-center justify-center top-0 w-full">
+                <h1 class="max-lg:text-[60rem] max-md:text-[55rem] text-[80rem] text-center h1-heading text-white mb-[120rem] mt-[100rem]">Embracing the Waves</h1>
+        </div>
+        <div class="custom-gradient w-full h-[52vh] absolute bottom-0"></div>
+    </section>
+
+    <section class="max-md:mx-[16rem] max-w-[1240rem] mx-auto pt-[119rem]">
+        <div class="max-lg:px-[18rem] max-lg:py-[43rem] w-full py-[72rem] px-[63rem] bg-[#28253B]">
+            <div class="max-md:grid-cols-2 max-md:gap-[15rem] grid grid-cols-4 grid-rows-2 gap-[38rem]">
+                <div class="bg-white flex items-center justify-center p-[11rem]">
+                    <img src="./events-partners/1.png" alt="">
+                </div>
+                <div class="bg-white flex items-center justify-center p-[11rem]">
+                    <img src="./events-partners/2.png" alt="">
+                </div>
+                <div class="bg-white flex items-center justify-center p-[11rem]">
+                    <img src="./events-partners/3.png" alt="">
+                </div>
+                <div class="bg-white flex items-center justify-center p-[11rem]">
+                    <img src="./events-partners/4.png" alt="">
+                </div>
+                <div class="bg-white flex items-center justify-center p-[11rem]">
+                    <img src="./events-partners/5.png" alt="">
+                </div>
+                <div class="bg-white flex items-center justify-center p-[11rem]">
+                    <img src="./events-partners/6.png" alt="">
+                </div>
+                <div class="bg-white flex items-center justify-center p-[11rem]">
+                    <img src="./events-partners/7.png" alt="">
+                </div>
+                <div class="bg-white flex items-center justify-center p-[11rem]">
+                    <img src="./events-partners/8.png" alt="">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="bg-custom-gray pt-[100rem] bg-[url(watermark.png)] bg-fixed bg-auto bg-no-repeat bg-bottom">
+        <div class="max-w-[1133rem] mx-auto p-6 mb-[30rem]">
+            
+            <div class="max-md:flex-col flex justify-between">
+                
+                <div class="max-md:w-full max-md:text-center w-[31%] mr-[68rem]">
+                    <img src="./footer-logo.png" alt="Image" class="max-md:m-auto h-auto">
+                    <p class=" text-white mt-4 text-[13rem] max-xl:text-[11rem] max-md:text-[12rem] align-left">Shark Bay is now one of 19 Australian World Heritage sites and one of the four in Australia (and the only one in WA) which meets all four natural criteria.</p>
+                </div>
+    
+                
+                <div class="max-md:mt-[22rem] max-md:pt-[17rem] max-md:border-t max-md:border-[rgba(255,255,255,.25)] max-md:w-full max-md:flex-col max-md:gap-[24rem] w-1/2 flex mr-[173rem] gap-x-[126rem]">
+                    
+                    <ul class="list-none p-0 text-white">
+                        <li class="mb-[24rem] text-[18rem] max-xl:text-[14rem] max-md:text-[18rem] font-medium">
+                            <a href="./home.html">Home</a>
+                        </li>
+                        <li class="mb-[24rem] text-[18rem] max-xl:text-[14rem] max-md:text-[18rem] font-medium">
+                            <a href="./events.html">Events</a>
+                        </li>
+                        <li class="mb-[24rem] text-[18rem] max-xl:text-[14rem] max-md:text-[18rem] font-medium">
+                            <a href="./gallery.html">Gallery</a>
+                        </li>
+                        <li class="text-[18rem] max-xl:text-[14rem] max-md:text-[18rem] font-medium">
+                            <a href="./our-partners.html">Our Partners</a>
+                        </li>
+                    </ul>
+
+                    <ul class="max-xl:ml-0 list-none p-0 text-white ml-[24rem]">
+                        <li class="mb-[24rem] text-[18rem] max-xl:text-[14rem] max-md:text-[18rem] font-medium">
+                            <a href="./how-to-find-us.html">How to Find us</a>
+                        </li>
+                        <li class="mb-[24rem] text-[18rem] max-xl:text-[14rem] max-md:text-[18rem] font-medium">
+                            <a href="./about.html">Meet the Crew</a>
+                        </li>
+                        <li class="text-[18rem] max-xl:text-[14rem] max-md:text-[18rem] font-medium">
+                            <a href="./get-in-touch.html">Get in Touch</a>
+                        </li>
+                    </ul>
+                </div>
+    
+                <div class="max-md:w-full max-md:mt-[30rem] max-md:pt-[30rem] max-md:border-t border-[rgba(255,255,255,.25)] w-[27%] items-center">
+                    <p class="mb-[20rem] text-white text-[18rem] max-xl:text-[14rem] max-md:text-[18rem]">Follow us on social media!</p>
+                    <div class="flex items-center">
+                        
+                        <a href="#" class="facebook block text-white rounded-[999rem] bg-gray-800 w-[40rem] h-[40rem] text-center flex items-center justify-center mr-[24rem]">
+                            <svg xmlns="http://www.w3.org/2000/svg" height="16rem" viewBox="0 0 320 512"><path fill="white" d="M279.14 288l14.22-92.66h-88.91v-60.13c0-25.35 12.42-50.06 52.24-50.06h40.42V6.26S260.43 0 225.36 0c-73.22 0-121.08 44.38-121.08 124.72v70.62H22.89V288h81.39v224h100.17V288z"/></svg>
+                        </a>
+                        
+                        <a href="#" class="instagram block text-white rounded-[999rem] bg-gray-800 w-[40rem] h-[40rem] text-center flex items-center justify-center mr-[24rem]">
+                            <svg xmlns="http://www.w3.org/2000/svg" height="16rem" viewBox="0 0 448 512"><path fill="white" d="M224.1 141c-63.6 0-114.9 51.3-114.9 114.9s51.3 114.9 114.9 114.9S339 319.5 339 255.9 287.7 141 224.1 141zm0 189.6c-41.1 0-74.7-33.5-74.7-74.7s33.5-74.7 74.7-74.7 74.7 33.5 74.7 74.7-33.6 74.7-74.7 74.7zm146.4-194.3c0 14.9-12 26.8-26.8 26.8-14.9 0-26.8-12-26.8-26.8s12-26.8 26.8-26.8 26.8 12 26.8 26.8zm76.1 27.2c-1.7-35.9-9.9-67.7-36.2-93.9-26.2-26.2-58-34.4-93.9-36.2-37-2.1-147.9-2.1-184.9 0-35.8 1.7-67.6 9.9-93.9 36.1s-34.4 58-36.2 93.9c-2.1 37-2.1 147.9 0 184.9 1.7 35.9 9.9 67.7 36.2 93.9s58 34.4 93.9 36.2c37 2.1 147.9 2.1 184.9 0 35.9-1.7 67.7-9.9 93.9-36.2 26.2-26.2 34.4-58 36.2-93.9 2.1-37 2.1-147.8 0-184.8zM398.8 388c-7.8 19.6-22.9 34.7-42.6 42.6-29.5 11.7-99.5 9-132.1 9s-102.7 2.6-132.1-9c-19.6-7.8-34.7-22.9-42.6-42.6-11.7-29.5-9-99.5-9-132.1s-2.6-102.7 9-132.1c7.8-19.6 22.9-34.7 42.6-42.6 29.5-11.7 99.5-9 132.1-9s102.7-2.6 132.1 9c19.6 7.8 34.7 22.9 42.6 42.6 11.7 29.5 9 99.5 9 132.1s2.7 102.7-9 132.1z"/></svg>
+                        </a>
+                        
+                        <a href="#" class="twitter block text-white rounded-[999rem] bg-gray-800 w-[40rem] h-[40rem] text-center flex items-center justify-center">
+                            <svg xmlns="http://www.w3.org/2000/svg" height="16rem" viewBox="0 0 512 512"><path fill="white" d="M459.37 151.716c.325 4.548.325 9.097.325 13.645 0 138.72-105.583 298.558-298.558 298.558-59.452 0-114.68-17.219-161.137-47.106 8.447.974 16.568 1.299 25.34 1.299 49.055 0 94.213-16.568 130.274-44.832-46.132-.975-84.792-31.188-98.112-72.772 6.498.974 12.995 1.624 19.818 1.624 9.421 0 18.843-1.3 27.614-3.573-48.081-9.747-84.143-51.98-84.143-102.985v-1.299c13.969 7.797 30.214 12.67 47.431 13.319-28.264-18.843-46.781-51.005-46.781-87.391 0-19.492 5.197-37.36 14.294-52.954 51.655 63.675 129.3 105.258 216.365 109.807-1.624-7.797-2.599-15.918-2.599-24.04 0-57.828 46.782-104.934 104.934-104.934 30.213 0 57.502 12.67 76.67 33.137 23.715-4.548 46.456-13.32 66.599-25.34-7.798 24.366-24.366 44.833-46.132 57.827 21.117-2.273 41.584-8.122 60.426-16.243-14.292 20.791-32.161 39.308-52.628 54.253z"/></svg>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="border-t border-white opacity-[.25]"></div>
+        <div class="py-[11rem] leading-[30rem] text-[14rem] max-xl:text-[12rem] text-center text-white">© 2023 Shark Bay Wind and Water Association INC</div>
+    </footer>
+
+    <style>
+
+        @media (min-width: 2600px) {
+            html {
+                font-size: 1.9px;
+            }
+        }
+
+        .hero {
+            background: linear-gradient(
+            0deg,
+            rgba(7, 18, 78, 0.13) 0%,
+            rgba(7, 18, 78, 0.13) 100%
+            ),
+            url(./hero.png), lightgray 50% / cover no-repeat;
+        }
+
+        @media (max-width: 768px) {
+            .hero {
+                background: linear-gradient(
+                0deg,
+                rgba(7, 18, 78, 0.13) 0%,
+                rgba(7, 18, 78, 0.13) 100%
+                ),
+                url(./hero-mobile.jpg), lightgray 50%;
+                background-repeat: no-repeat;
+                background-size: cover;
+            }
+        }
+
+        body {
+            overflow-x: hidden;
+        }
+
+        .preheading {
+            font-weight: 500;
+            line-height: 42rem;
+            letter-spacing: 0.25em;
+            color: #04FEE5;
+            text-transform: uppercase;
+        }
+
+        @media (max-width: 640px) {
+          .preheading {
+            font-size: 27rem;
+          }
+        }
+
+        .h1-heading {
+            font-size: 85rem;
+            font-weight: bold;
+            line-height: 87rem;
+        }
+
+        @media(max-width: 1024px) {
+            .h1-heading {
+                font-size: 60rem;
+                line-height: 62rem;
+                max-width: 650rem;
+                margin-left: auto;
+                margin-right: auto;
+            }
+        }
+
+        @media(max-width: 640px) {
+            .h1-heading {
+                font-size: 55rem;
+                max-width: 390rem;
+            }
+        }
+
+
+        form .button:hover {
+            transform: none;
+        }
+
+        nav {
+            z-index: 100;
+        }
+
+        nav img {
+            transition: all 500ms ease;
+        }
+
+        .nav-link span {
+            position: relative;
+            padding-bottom: 8rem;
+            font-size: 17rem;
+            line-height: 1;
+        }
+
+        .nav-link:hover span {
+            animation: moveUp 800ms ease;
+        }
+
+        @keyframes moveUp {
+            0% {
+                top: 0;
+                font-size: 13rem;
+            }
+
+            50% {
+                top: 7rem;
+                font-size: 20rem;
+            }
+
+
+            100% {
+                top: 0;
+                font-size: 13rem;
+            }
+        }
+
+
+        .nav-link {
+            text-transform: capitalize;
+        }
+
+
+        .button:hover, .mobile-menu {
+            transform: rotateY(180deg);
+        }
+
+        .custom-gradient {
+            background: linear-gradient(180deg, rgba(24, 22, 39, 0.00) 0%, #181627 100%);
+        }
+
+        .custom-gradient-reverse {
+            background: linear-gradient(180deg, #181627 0%, rgba(24, 22, 39, 0.00) 100%);
+        }
+    
+        .button {
+            position: relative;
+            transform-style: preserve-3d;
+            transition: transform 0.3s ease-in-out;
+            cursor: pointer;
+            width: 177rem;
+            height: 54rem;
+            font-weight: 500;
+            font-size: 18rem;
+            letter-spacing: 2rem;
+            color: white;
+            padding: 14px 40rem;
+        }
+
+        @media (max-width: 1024px) {
+            .button {
+                font-size: 13rem;
+            }
+        }
+
+        @media (max-width: 640px) {
+            .button {
+                font-size: 15rem;
+            }
+        }
+
+
+        .button:hover, .mobile-menu:hover {
+            transform: rotateY(90deg);
+            background-size: 100% 100%;
+        }
+
+        .button div {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background: linear-gradient(92deg, #04FEE5 0.88%, #0088FE 100.54%);
+            left: 0;
+            top: 0;
+        }
+
+        .front { transform: translateZ(100px); }
+        .left:not(.slider-navigation) { transform: rotateY(-90deg) translateZ(100px); }
+
+        @keyframes button {
+            0%{background-position:10% 0%}
+            50%{background-position:91% 100%}
+            100%{background-position:10% 0%}
+        }
+
+        .mobile-menu {
+            position: relative;
+            transform-style: preserve-3d;
+            transition: transform 0.3s ease-in-out;
+            cursor: pointer;
+            width: 30rem;
+            height: 54rem;
+            font-weight: 500;
+            font-size: 18rem;
+            letter-spacing: 2rem;
+            color: white;
+            padding: 0;
+        }
+
+        .mobile-menu div {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            left: 0;
+            top: 0;
+        }
+
+        .mobile-menu .front { transform: translateZ(30px); }
+        .mobile-menu .right:not(.slider-navigation) { transform: rotateY(90deg) translateZ(30px); }
+
+        .nav-link:not(.active) > div {
+            visibility: hidden;
+        }
+
+        .nav-link > div {
+            background-size: 200% 100%;
+            animation: gradient 5000ms ease;
+            width: 100%;
+
+        }
+
+        .login {
+            border: 2px solid transparent;
+            -moz-border-image: -moz-linear-gradient(top, #03FAE5 0%, #008EFC 100%);
+            -webkit-border-image: -webkit-linear-gradient(top, #03FAE5 0%, #008EFC 100%);
+            border-image: linear-gradient(to right, #03FAE5 0%, #008EFC 100%);
+            border-image-slice: 1;
+        }
+
+        .button:hover {
+            animation: gradient 500ms ease;   
+        }
+
+        .login:hover {
+            animation: kite;
+            animation-duration: 1300ms;
+            animation-timing-function: cubic-bezier(0.075, 0.82, 0.165, 1);
+            animation-iteration-count: 1;
+            color: #2b2b2e;
+        }
+
+        .login span {
+            position: relative;
+            overflow: hidden;
+        }
+
+        .login span:before {
+            width: 0;
+            background: #BeBeC6;
+            height: 100%;
+            transition: width 800ms ease;
+            position: absolute;
+            transform: skew(15deg);
+            top: 0;
+            left: -10rem;
+            content: '';
+            z-index: -1;
+        }
+
+        .nav-link:hover span {
+            color: rgb(34 211 238);
+        }
+
+        .login:hover span:before {
+            width: 120%;
+
+        }
+
+        @keyframes kite {
+            0% {
+                transform: skew(10deg);
+            }
+
+            15.5% {
+                transform: skew(0)
+            }
+
+            20% {
+                transform: skew(-8deg);
+            }
+
+            37.5% {
+                transform: skew(0deg)
+            }
+
+
+            50% {
+                transform: skew(0)
+            }
+
+
+        }
+
+        @keyframes gradient {
+            0% {
+                background-position: 0 100%;
+            }
+            50% {
+                background-size: 50% 100%;
+                background-position: 200% 100%;
+            }
+            100% {
+                background-position: 100% 100%;
+            }
+        }
+
+        @keyframes button {
+            0%{background-position:10% 0%}
+            50%{background-position:91% 100%}
+            100%{background-position:10% 0%}
+        }
+
+
+        @media(max-width: 1024px) {
+            .nav-link span {
+                font-size: 13rem;
+            }
+        }
+
+        /* Below the fold */
+
+        .button {
+            position: relative;
+            transform-style: preserve-3d;
+            transition: transform 0.3s ease-in-out;
+            cursor: pointer;
+            width: 177rem;
+            height: 54rem;
+        }
+
+        .focus\:outline-none:focus {
+            outline: 2px solid #72cce5;
+            outline-offset: 2rem;
+        }
+
+        input, input:focus {
+            transition: all 800ms ease;
+            height: 42rem;
+        }
+
+        .button:hover {
+            transform: rotateY(90deg); /* Rotate on hover */
+        }
+
+        .button div {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background: linear-gradient(92deg, #04FEE5 0.88%, #0088FE 100.54%);
+            left: 0;
+            top: 0;
+        }
+
+        .front { transform: translateZ(100px); }
+        .back { transform: rotateY(180deg) translateZ(100px); }
+        .top { transform: rotateX(90deg) translateZ(100px); }
+        .bottom { transform: rotateX(-90deg) translateZ(100px); }
+        .left { transform: rotateY(-90deg) translateZ(100px); }
+        .right { transform: rotateY(90deg) translateZ(100px); }
+
+        .custom-image {
+            height: auto;
+            max-height: 100%;
+            width: 33.33vw;
+            height: 56.8vh;
+            object-fit: cover;
+        }
+
+        .slider-component {
+            display: flex;
+            flex-wrap: nowrap;
+            justify-content: center;
+            align-items: center;
+            overflow-x: scroll;
+            overflow-y: visible;
+            width: 100vw;
+            position: relative;
+            z-index: 10;
+            padding-top: 5%;
+        }
+
+        #map {
+            margin-bottom: -40rem;
+            width: 43.5%;
+            min-height: 100vh;
+            height: auto;
+        }
+
+        .instagram:hover {
+            background: linear-gradient(45deg, #feda75, #fa7e1e, #d62976, #962fbf, #4f5bd5);
+        }
+
+        .facebook:hover {
+            background: linear-gradient(45deg, #19AFFF 0%, #0062E0 100%);
+        }
+
+        .twitter:hover {
+            background: #1f9ceb;
+        }
+
+        a {
+            transition: color 500ms ease;
+        }
+
+        a:not(.button):hover {
+            color: #03F8E6;
+        }
+
+
+    </style>
+    <!-- Heading -->
+    <script>
+document.querySelector('.mobile-menu').addEventListener('click', function(event) {
+    event.preventDefault();
+
+    document.querySelector('nav').classList.add('mobile');
+});
+
+document.querySelector('nav ul:first-of-type + a').addEventListener('click', function(event) {
+    event.preventDefault();
+
+    document.querySelector('nav').classList.remove('mobile');
+});
+</script>
+<script async>
+        const getHeading = async function() {
+            let page = await fetch('https://sb-wwa.com/wordpress/wp-json/wp/v2/pages?include=300');
+            
+            page = await page.json();
+
+            return page[0].heading;
+        }
+
+        const setHeading = (async function() {
+            const pageHeading = await getHeading();
+            const templateHeading = document.querySelector('.h1-heading');
+
+            templateHeading.innerHTML = pageHeading;
+        })();
+    </script>
+
+    <!-- Navigation menu hover animation -->
+    <script>
+        const navLinkDivs = document.querySelectorAll('a.nav-link:not(.active)');
+
+        navLinkDivs.forEach((divElement) => {
+        const text = divElement.textContent.trim();
+            divElement.innerHTML = '';
+
+            for (let i = 0; i < text.length; i++) {
+                const letterDiv = document.createElement('span');
+                letterDiv.textContent = text[i];
+
+                divElement.appendChild(letterDiv);
+            }
+        });
+
+        
+        const navLinks = document.querySelectorAll('.nav-link:not(.active)');
+
+        navLinks.forEach((link) => {
+            link.style.width = link.offsetWidth * 1.3 + 'px';
+            link.style.height = link.offsetHeight * 1.3 + 'px';
+            link.style.display = 'block';
+            link.querySelectorAll('span').forEach((span, index) => {
+                span.style.animationDelay = index * 50 + 'ms'
+            });
+        });
+    </script>
+
+
+    
+</html>
